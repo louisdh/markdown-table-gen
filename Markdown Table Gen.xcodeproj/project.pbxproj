@@ -10,6 +10,7 @@
 		BE927514201522F100BD2761 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE927513201522F100BD2761 /* main.swift */; };
 		BEFE541B2067F2EA00FEFE93 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE541A2067F2EA00FEFE93 /* Errors.swift */; };
 		BEFE542920682CA100FEFE93 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542820682CA100FEFE93 /* Input.swift */; };
+		BEFE542B2068304800FEFE93 /* MarkdownTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542A2068304800FEFE93 /* MarkdownTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		BE927513201522F100BD2761 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BEFE541A2067F2EA00FEFE93 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		BEFE542820682CA100FEFE93 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		BEFE542A2068304800FEFE93 /* MarkdownTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		BE927512201522F100BD2761 /* Markdown Table Gen */ = {
 			isa = PBXGroup;
 			children = (
+				BEFE542A2068304800FEFE93 /* MarkdownTable.swift */,
 				BEFE54192067F2E000FEFE93 /* Util */,
 				BE927513201522F100BD2761 /* main.swift */,
 			);
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFE542920682CA100FEFE93 /* Input.swift in Sources */,
+				BEFE542B2068304800FEFE93 /* MarkdownTable.swift in Sources */,
 				BEFE541B2067F2EA00FEFE93 /* Errors.swift in Sources */,
 				BE927514201522F100BD2761 /* main.swift in Sources */,
 			);
