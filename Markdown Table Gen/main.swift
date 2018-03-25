@@ -32,24 +32,24 @@ guard let maxLength = data.sorted(by: { (s1, s2) -> Bool in
 
 print("Output:\n")
 
+var output = ""
+
 let headers1 = Array(repeating: "|", count: numberOfColumns + 1)
 let headerSeparator = Array(repeatElement(" ", count: maxLength + 2)).joined()
-print(headers1.joined(separator: headerSeparator))
+output += headers1.joined(separator: headerSeparator) + "\n"
+
 let headers2 = Array(repeating: "|", count: numberOfColumns + 1)
 
 
 let headers1Separator = Array(repeating: "-", count: maxLength).joined()
 
-print(headers1.joined(separator: " " + headers1Separator + " "))
+output += headers1.joined(separator: " " + headers1Separator + " ") + "\n"
 
 var i = 0
 
 for d in data {
 	
-	print("|", separator: "", terminator: "")
-	
-	print(" ", separator: "", terminator: "")
-	print(d, separator: "", terminator: "")
+	output += "| \(d)"
 	
 	let length = d.count
 	
@@ -57,17 +57,20 @@ for d in data {
 	
 	if extraSpacingNeeded > 0 {
 		for _ in 0..<extraSpacingNeeded {
-			print(" ", separator: "", terminator: "")
+			output += " "
 		}
 	}
 	
-	print(" ", separator: "", terminator: "")
+	output += " "
 
 	i += 1
 	
 	if i == numberOfColumns {
-		print("|", separator: "", terminator: "\n")
+		output += "|\n"
 
 		i = 0
 	}
 }
+
+print(output)
+
