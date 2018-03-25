@@ -16,11 +16,10 @@ func markdownTable(for data: [String], numberOfColumns: Int) -> String {
 	
 	data.append(contentsOf: Array(repeating: " ", count: extraEmptyCells))
 	
-	guard let maxLength = data.sorted(by: { (s1, s2) -> Bool in
+	/// Max length of all data determines the cell width.
+	let maxLength = data.sorted(by: { (s1, s2) -> Bool in
 		return s1.count > s2.count
-	}).first?.count else {
-		runtimeError("Error")
-	}
+	}).first?.count ?? 1
 	
 	var output = ""
 	
