@@ -30,7 +30,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BEFE5443206956B900FEFE93"
+               BuildableName = "MarkdownTableGeneratorTests.xctest"
+               BlueprintName = "MarkdownTableGeneratorTests"
+               ReferencedContainer = "container:Markdown Table Gen.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BEFE54302068379900FEFE93"
+            BuildableName = "MarkdownTableGenerator.framework"
+            BlueprintName = "MarkdownTableGenerator"
+            ReferencedContainer = "container:Markdown Table Gen.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
