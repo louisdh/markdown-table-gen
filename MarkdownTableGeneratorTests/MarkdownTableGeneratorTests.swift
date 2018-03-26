@@ -57,4 +57,24 @@ class MarkdownTableGeneratorTests: XCTestCase {
 		XCTAssertEqual(output, expectedOutput)
 	}
 	
+	func testWords() {
+		
+		let numberOfColumns = 4
+		
+		let data = ["Here's", "To", "The", "Crazy", "Ones"]
+		
+		let output = markdownTable(for: data, numberOfColumns: numberOfColumns)
+		
+		let expectedOutput = """
+							|        |        |        |        |
+							| ------ | ------ | ------ | ------ |
+							| Here's | To     | The    | Crazy  |
+							| Ones   |        |        |        |
+
+							"""
+		
+		XCTAssertEqual(output, expectedOutput)
+		
+	}
+	
 }

@@ -20,7 +20,9 @@ public func markdownTable(for data: [String], numberOfColumns: Int) -> String {
 		
 	} else {
 		
-		extraEmptyCells = Int(abs(Double(data.count).remainder(dividingBy: Double(numberOfColumns))))
+		let numberOfCellsAtBottomRow = Int(abs(Double(data.count).truncatingRemainder(dividingBy: Double(numberOfColumns))))
+		
+		extraEmptyCells = numberOfColumns - numberOfCellsAtBottomRow
 		
 	}
 	
