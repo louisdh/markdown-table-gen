@@ -10,7 +10,7 @@
 <a href="https://paypal.me/louisdhauwe"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat" alt="Donate via PayPal"/></a>
 </p>
 
-This is a little script written in Swift that generates a Markdown table from an an array of strings for a given number of columns.
+This is a little script written in Swift that generates a Markdown table from an array of strings for a given number of columns.
 
 ## Example
 
