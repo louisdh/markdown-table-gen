@@ -13,7 +13,19 @@
 		BEFE54352068379900FEFE93 /* MarkdownTableGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFE54332068379900FEFE93 /* MarkdownTableGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEFE54392068379E00FEFE93 /* MarkdownTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542A2068304800FEFE93 /* MarkdownTable.swift */; };
 		BEFE543B206837C400FEFE93 /* MarkdownTableGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */; };
+		BEFE5447206956B900FEFE93 /* MarkdownTableGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE5446206956B900FEFE93 /* MarkdownTableGeneratorTests.swift */; };
+		BEFE5449206956B900FEFE93 /* MarkdownTableGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEFE544A206956B900FEFE93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE927508201522F100BD2761 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEFE54302068379900FEFE93;
+			remoteInfo = MarkdownTableGenerator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BE92750E201522F100BD2761 /* CopyFiles */ = {
@@ -36,6 +48,9 @@
 		BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkdownTableGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFE54332068379900FEFE93 /* MarkdownTableGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownTableGenerator.h; sourceTree = "<group>"; };
 		BEFE54342068379900FEFE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFE5444206956B900FEFE93 /* MarkdownTableGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownTableGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFE5446206956B900FEFE93 /* MarkdownTableGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTableGeneratorTests.swift; sourceTree = "<group>"; };
+		BEFE5448206956B900FEFE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +69,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEFE5441206956B900FEFE93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFE5449206956B900FEFE93 /* MarkdownTableGenerator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +85,7 @@
 			children = (
 				BE927512201522F100BD2761 /* Markdown Table Gen */,
 				BEFE54322068379900FEFE93 /* MarkdownTableGenerator */,
+				BEFE5445206956B900FEFE93 /* MarkdownTableGeneratorTests */,
 				BE927511201522F100BD2761 /* Products */,
 				BEFE543A206837C400FEFE93 /* Frameworks */,
 			);
@@ -72,6 +96,7 @@
 			children = (
 				BE927510201522F100BD2761 /* Example */,
 				BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */,
+				BEFE5444206956B900FEFE93 /* MarkdownTableGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +134,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEFE5445206956B900FEFE93 /* MarkdownTableGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEFE5446206956B900FEFE93 /* MarkdownTableGeneratorTests.swift */,
+				BEFE5448206956B900FEFE93 /* Info.plist */,
+			);
+			path = MarkdownTableGeneratorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +194,24 @@
 			productReference = BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		BEFE5443206956B900FEFE93 /* MarkdownTableGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEFE544C206956B900FEFE93 /* Build configuration list for PBXNativeTarget "MarkdownTableGeneratorTests" */;
+			buildPhases = (
+				BEFE5440206956B900FEFE93 /* Sources */,
+				BEFE5441206956B900FEFE93 /* Frameworks */,
+				BEFE5442206956B900FEFE93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEFE544B206956B900FEFE93 /* PBXTargetDependency */,
+			);
+			name = MarkdownTableGeneratorTests;
+			productName = MarkdownTableGeneratorTests;
+			productReference = BEFE5444206956B900FEFE93 /* MarkdownTableGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +227,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					BEFE54302068379900FEFE93 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BEFE5443206956B900FEFE93 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -194,12 +250,20 @@
 			targets = (
 				BE92750F201522F100BD2761 /* Example */,
 				BEFE54302068379900FEFE93 /* MarkdownTableGenerator */,
+				BEFE5443206956B900FEFE93 /* MarkdownTableGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BEFE542F2068379900FEFE93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEFE5442206956B900FEFE93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,7 +291,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEFE5440206956B900FEFE93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFE5447206956B900FEFE93 /* MarkdownTableGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEFE544B206956B900FEFE93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEFE54302068379900FEFE93 /* MarkdownTableGenerator */;
+			targetProxy = BEFE544A206956B900FEFE93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BE927515201522F100BD2761 /* Debug */ = {
@@ -416,6 +496,34 @@
 			};
 			name = Release;
 		};
+		BEFE544D206956B900FEFE93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				INFOPLIST_FILE = MarkdownTableGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.silverfox.MarkdownTableGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		BEFE544E206956B900FEFE93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				INFOPLIST_FILE = MarkdownTableGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.silverfox.MarkdownTableGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +550,15 @@
 			buildConfigurations = (
 				BEFE54362068379900FEFE93 /* Debug */,
 				BEFE54372068379900FEFE93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEFE544C206956B900FEFE93 /* Build configuration list for PBXNativeTarget "MarkdownTableGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEFE544D206956B900FEFE93 /* Debug */,
+				BEFE544E206956B900FEFE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
