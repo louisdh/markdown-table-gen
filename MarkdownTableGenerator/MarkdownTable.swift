@@ -12,7 +12,17 @@ public func markdownTable(for data: [String], numberOfColumns: Int) -> String {
 	
 	var data = data
 	
-	let extraEmptyCells = Int(abs(Double(data.count).remainder(dividingBy: Double(numberOfColumns))))
+	let extraEmptyCells: Int
+	
+	if data.isEmpty {
+		
+		extraEmptyCells = numberOfColumns
+		
+	} else {
+		
+		extraEmptyCells = Int(abs(Double(data.count).remainder(dividingBy: Double(numberOfColumns))))
+		
+	}
 	
 	data.append(contentsOf: Array(repeating: " ", count: extraEmptyCells))
 	

@@ -30,6 +30,27 @@ class MarkdownTableGeneratorTests: XCTestCase {
 		let expectedOutput = """
 							|   |   |   |   |
 							| - | - | - | - |
+							|   |   |   |   |
+
+							"""
+		
+		XCTAssertEqual(output, expectedOutput)
+	}
+	
+	func testAlphabet() {
+		
+		let numberOfColumns = 10
+
+		let data = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+		
+		let output = markdownTable(for: data, numberOfColumns: numberOfColumns)
+		
+		let expectedOutput = """
+							|   |   |   |   |   |   |   |   |   |   |
+							| - | - | - | - | - | - | - | - | - | - |
+							| A | B | C | D | E | F | G | H | I | J |
+							| K | L | M | N | O | P | Q | R | S | T |
+							| U | V | W | X | Y | Z |   |   |   |   |
 
 							"""
 		
