@@ -83,7 +83,7 @@
 		BE927507201522F100BD2761 = {
 			isa = PBXGroup;
 			children = (
-				BE927512201522F100BD2761 /* Markdown Table Gen */,
+				BE927512201522F100BD2761 /* Example */,
 				BEFE54322068379900FEFE93 /* MarkdownTableGenerator */,
 				BEFE5445206956B900FEFE93 /* MarkdownTableGeneratorTests */,
 				BE927511201522F100BD2761 /* Products */,
@@ -101,13 +101,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE927512201522F100BD2761 /* Markdown Table Gen */ = {
+		BE927512201522F100BD2761 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				BEFE54192067F2E000FEFE93 /* Util */,
 				BE927513201522F100BD2761 /* main.swift */,
 			);
-			path = "Markdown Table Gen";
+			path = Example;
 			sourceTree = "<group>";
 		};
 		BEFE54192067F2E000FEFE93 /* Util */ = {
