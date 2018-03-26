@@ -8,7 +8,7 @@
 
 import Foundation
 
-func markdownTable(for data: [String], numberOfColumns: Int) -> String {
+public func markdownTable(for data: [String], numberOfColumns: Int) -> String {
 	
 	var data = data
 	

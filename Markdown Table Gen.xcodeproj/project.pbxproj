@@ -10,7 +10,9 @@
 		BE927514201522F100BD2761 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE927513201522F100BD2761 /* main.swift */; };
 		BEFE541B2067F2EA00FEFE93 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE541A2067F2EA00FEFE93 /* Errors.swift */; };
 		BEFE542920682CA100FEFE93 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542820682CA100FEFE93 /* Input.swift */; };
-		BEFE542B2068304800FEFE93 /* MarkdownTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542A2068304800FEFE93 /* MarkdownTable.swift */; };
+		BEFE54352068379900FEFE93 /* MarkdownTableGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFE54332068379900FEFE93 /* MarkdownTableGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEFE54392068379E00FEFE93 /* MarkdownTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE542A2068304800FEFE93 /* MarkdownTable.swift */; };
+		BEFE543B206837C400FEFE93 /* MarkdownTableGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,15 +28,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BE927510201522F100BD2761 /* Markdown Table Gen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Markdown Table Gen"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE927510201522F100BD2761 /* Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Example; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE927513201522F100BD2761 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BEFE541A2067F2EA00FEFE93 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		BEFE542820682CA100FEFE93 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		BEFE542A2068304800FEFE93 /* MarkdownTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTable.swift; sourceTree = "<group>"; };
+		BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkdownTableGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFE54332068379900FEFE93 /* MarkdownTableGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkdownTableGenerator.h; sourceTree = "<group>"; };
+		BEFE54342068379900FEFE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BE92750D201522F100BD2761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFE543B206837C400FEFE93 /* MarkdownTableGenerator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEFE542D2068379900FEFE93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,14 +61,17 @@
 			isa = PBXGroup;
 			children = (
 				BE927512201522F100BD2761 /* Markdown Table Gen */,
+				BEFE54322068379900FEFE93 /* MarkdownTableGenerator */,
 				BE927511201522F100BD2761 /* Products */,
+				BEFE543A206837C400FEFE93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		BE927511201522F100BD2761 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE927510201522F100BD2761 /* Markdown Table Gen */,
+				BE927510201522F100BD2761 /* Example */,
+				BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,7 +79,6 @@
 		BE927512201522F100BD2761 /* Markdown Table Gen */ = {
 			isa = PBXGroup;
 			children = (
-				BEFE542A2068304800FEFE93 /* MarkdownTable.swift */,
 				BEFE54192067F2E000FEFE93 /* Util */,
 				BE927513201522F100BD2761 /* main.swift */,
 			);
@@ -79,12 +94,40 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		BEFE54322068379900FEFE93 /* MarkdownTableGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				BEFE54332068379900FEFE93 /* MarkdownTableGenerator.h */,
+				BEFE542A2068304800FEFE93 /* MarkdownTable.swift */,
+				BEFE54342068379900FEFE93 /* Info.plist */,
+			);
+			path = MarkdownTableGenerator;
+			sourceTree = "<group>";
+		};
+		BEFE543A206837C400FEFE93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BEFE542E2068379900FEFE93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFE54352068379900FEFE93 /* MarkdownTableGenerator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		BE92750F201522F100BD2761 /* Markdown Table Gen */ = {
+		BE92750F201522F100BD2761 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE927517201522F100BD2761 /* Build configuration list for PBXNativeTarget "Markdown Table Gen" */;
+			buildConfigurationList = BE927517201522F100BD2761 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				BE92750C201522F100BD2761 /* Sources */,
 				BE92750D201522F100BD2761 /* Frameworks */,
@@ -94,10 +137,28 @@
 			);
 			dependencies = (
 			);
-			name = "Markdown Table Gen";
+			name = Example;
 			productName = "Markdown Table Gen";
-			productReference = BE927510201522F100BD2761 /* Markdown Table Gen */;
+			productReference = BE927510201522F100BD2761 /* Example */;
 			productType = "com.apple.product-type.tool";
+		};
+		BEFE54302068379900FEFE93 /* MarkdownTableGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEFE54382068379900FEFE93 /* Build configuration list for PBXNativeTarget "MarkdownTableGenerator" */;
+			buildPhases = (
+				BEFE542C2068379900FEFE93 /* Sources */,
+				BEFE542D2068379900FEFE93 /* Frameworks */,
+				BEFE542E2068379900FEFE93 /* Headers */,
+				BEFE542F2068379900FEFE93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkdownTableGenerator;
+			productName = MarkdownTableGenerator;
+			productReference = BEFE54312068379900FEFE93 /* MarkdownTableGenerator.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,6 +171,10 @@
 				ORGANIZATIONNAME = "Silver Fox";
 				TargetAttributes = {
 					BE92750F201522F100BD2761 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BEFE54302068379900FEFE93 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -127,10 +192,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE92750F201522F100BD2761 /* Markdown Table Gen */,
+				BE92750F201522F100BD2761 /* Example */,
+				BEFE54302068379900FEFE93 /* MarkdownTableGenerator */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEFE542F2068379900FEFE93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE92750C201522F100BD2761 /* Sources */ = {
@@ -138,9 +214,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFE542920682CA100FEFE93 /* Input.swift in Sources */,
-				BEFE542B2068304800FEFE93 /* MarkdownTable.swift in Sources */,
 				BEFE541B2067F2EA00FEFE93 /* Errors.swift in Sources */,
 				BE927514201522F100BD2761 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEFE542C2068379900FEFE93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFE54392068379E00FEFE93 /* MarkdownTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,9 +339,13 @@
 		BE927518201522F100BD2761 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -266,10 +353,66 @@
 		BE927519201522F100BD2761 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		BEFE54362068379900FEFE93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MarkdownTableGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.silverfox.MarkdownTableGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEFE54372068379900FEFE93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MarkdownTableGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = be.silverfox.MarkdownTableGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -285,11 +428,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE927517201522F100BD2761 /* Build configuration list for PBXNativeTarget "Markdown Table Gen" */ = {
+		BE927517201522F100BD2761 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE927518201522F100BD2761 /* Debug */,
 				BE927519201522F100BD2761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEFE54382068379900FEFE93 /* Build configuration list for PBXNativeTarget "MarkdownTableGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEFE54362068379900FEFE93 /* Debug */,
+				BEFE54372068379900FEFE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
